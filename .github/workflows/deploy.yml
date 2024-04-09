@@ -1,0 +1,66 @@
+on:
+  push:
+    branches:
+      - main
+
+name: Deploy to xara-61.isaac.co.zw
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v3
+
+    - name: Install dependencies
+      uses: php-actions/composer@v6
+      with:
+        php_version: "8.2"
+        command: install --no-dev --prefer-dist
+    
+        # - uses: actions/checkout@v4
+    # - name: Build Node Packages
+    #   uses: actions/setup-node@v3
+    #   with:
+    #     node-version: 18
+    # - run: npm install
+    # - run: npm run build
+
+    - name: FTP Upload
+      uses: modern-dev/ftp-mirror@v2
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        user: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        remote_dir: ./htdocs/
+        exclude: |
+          .git*
+          .git*/**
+          .github*
+          .github/**
+          .vscode*
+          .vscode/**
+          node_modules/**
+          docs*
+          docs/**
+          tests*
+          tests/**
+          phpunit.xml
+          env
+          .env
+          .editorconfig
+          .gitattributes
+          .gitignore
+          .styleci.yml
+          .env.example
+          .gitpod.yml
+          .phpunit.result.cache
+          builds
+          preload.php
+          starter.ini
+          
+    - name: Run Migrations 
+      id: getRequest
+      uses: skgandikota/FetchUrl@v1.3
+      with:
+        url: "https://xara-61.isaac.co.zw/"
