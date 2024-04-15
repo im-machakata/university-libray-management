@@ -17,14 +17,6 @@ jobs:
       with:
         php_version: "8.2"
         command: install --no-dev --prefer-dist
-    
-        # - uses: actions/checkout@v4
-    # - name: Build Node Packages
-    #   uses: actions/setup-node@v3
-    #   with:
-    #     node-version: 18
-    # - run: npm install
-    # - run: npm run build
 
     - name: FTP Upload
       uses: modern-dev/ftp-mirror@v2
