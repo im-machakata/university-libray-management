@@ -1,0 +1,11 @@
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: middle;
+}
+.form-control {
+  box-shadow: none !important;
+  outline: none !important;
+}
