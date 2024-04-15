@@ -4,6 +4,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\BooksController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\HomeController;
+use App\Http\Middleware\UserIsLogged;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +24,7 @@ Route::get('/read-books', [BooksController::class, 'read']);
 Route::get('/login', [AccountController::class, 'login']);
 Route::get('/register', [AccountController::class, 'register']);
 Route::get('/chat-with-a-librarian', [ChatController::class, 'index']);
+
+Route::middleware(UserIsLogged::class)->group(static function () {
+    // add all routes that need to be accessed while logged in here. 
+});
