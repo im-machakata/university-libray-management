@@ -1,3 +1,14 @@
+<?php
+
+use Illuminate\Http\Request;
+
+$query = null;
+$request = Request::capture();
+
+// add query to form
+if ($request->is("search-books") && $request->query('q')) {
+    $query = $request->query('q');
+} ?>
 <nav class="py-2 border-bottom">
     <div class="container d-flex flex-wrap">
         <ul class="nav me-auto">
@@ -31,7 +42,7 @@
             <span class="fs-4 ms-lg-2">Find Books</span>
         </a>
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 d-flex gap-2" role="search" action="/search-books">
-            <input type="search" class="form-control" placeholder="Search..." aria-label="Search" required>
+            <input name="q" type="search" class="form-control" placeholder="Search..." value="{{ $query }}" aria-label="Search" required>
             <button class="btn btn-outline-light border text-dark text-uppercase d-inline-block" type="submit"><i class="fa-light fa-magnifying-glass"></i></button>
         </form>
     </div>
