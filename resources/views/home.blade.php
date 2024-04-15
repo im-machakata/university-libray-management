@@ -12,7 +12,7 @@
         <div class="container my-5">
             <div class="row justify-content-between">
                 <div class="col-md-4 col-lg-3">
-                    <div class="card border-0 shadow rounded-3">
+                    <div class="card border-0 shadow rounded-3 mb-3">
                         <img src="/static/images/class.jpg" class="card-img-top rounded-top-3" alt="...">
                         <div class="card-body">
                             <h2 class="h4 card-title">Chat with us</h2>
@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-3">
-                    <div class="card border-0 shadow rounded-3">
+                    <div class="card border-0 shadow rounded-3 mb-3">
                         <img src="/static/images/class.jpg" class="card-img-top rounded-top-3" alt="...">
                         <div class="card-body">
                             <h2 class="h4 card-title">Read Books</h2>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-3">
-                    <div class="card border-0 shadow rounded-3">
+                    <div class="card border-0 shadow rounded-3 mb-3">
                         <img src="/static/images/class.jpg" class="card-img-top rounded-top-3" alt="...">
                         <div class="card-body">
                             <h2 class="h4 card-title">System Tutorials</h2>
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-3">
-                    <div class="card border-0 shadow rounded-3">
+                    <div class="card border-0 shadow rounded-3 mb-3">
                         <img src="/static/images/class.jpg" class="card-img-top rounded-top-3" alt="...">
                         <div class="card-body">
                             <h2 class="h4 card-title">Create Account</h2>
