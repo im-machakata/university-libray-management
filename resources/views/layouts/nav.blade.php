@@ -42,7 +42,7 @@ if ($request->is("search-books") && $request->query('q')) {
             <span class="fs-4 ms-lg-2">Find Books</span>
         </a>
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 d-flex gap-2" role="search" action="/search-books">
-            <input name="q" type="search" class="form-control" placeholder="Search..." value="{{ $query }}" aria-label="Search" required>
+            <input name="q" type="search" class="form-control" placeholder="ISBN, Title or Keywords..." value="{{ $query }}" aria-label="Search" required>
             <button class="btn btn-outline-light border text-dark text-uppercase d-inline-block" type="submit"><i class="fa-light fa-magnifying-glass"></i></button>
         </form>
     </div>
