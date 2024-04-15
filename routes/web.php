@@ -18,4 +18,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/search-books', [BooksController::class, 'index']);
+Route::get('/read-books', [BooksController::class, 'read']);
 Route::get('/login', [AccountController::class, 'login']);

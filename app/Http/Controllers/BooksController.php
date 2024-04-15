@@ -22,4 +22,7 @@ class BooksController extends Controller
             ->with('query', $query)
             ->with('page', $page);
     }
+    public function read(Request $request){
+        return view('books/read');
+    }
 }
