@@ -7,6 +7,7 @@
     <meta name="description" content="Online GZU Library Management System">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/bootstrap.min.css?version=5.3.3">
+    <link rel="stylesheet" href="/static/css/fas/all.css?version=6.3.0-alpha">
     <link rel="stylesheet" href="/static/css/style.css?version={{ Storage::disk('static')->lastModified('/css/style.css') }}">
     <script src="/static/js/jquery.3.7.1.min.js" defer async></script>
     <title>@yield('title','Library Management System')</title>

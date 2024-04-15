@@ -30,8 +30,9 @@
             <img src="/static/images/bookshelf.svg" alt="Bookshelf icon" height="40">
             <span class="fs-4 ms-lg-2">Find Books</span>
         </a>
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0" role="search" action="/search-books">
-            <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 d-flex gap-2" role="search" action="/search-books">
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search" required>
+            <button class="btn btn-outline-light border text-dark text-uppercase d-inline-block" type="submit"><i class="fa-light fa-magnifying-glass"></i></button>
         </form>
     </div>
 </header>
