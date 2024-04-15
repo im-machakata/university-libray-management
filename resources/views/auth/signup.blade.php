@@ -13,37 +13,37 @@
                             <div class="col-lg-6">
                                 <div class="mb-3">
                                     <label for="username">Username</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="username" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="mb-3">
                                     <label for="password">Password</label>
-                                    <input type="password" class="form-control">
+                                    <input type="password" name="password" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="mb-3">
                                     <label for="name">Name</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="name" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="mb-3">
                                     <label for="surname">Surname</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="surname" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="mb-3">
                                     <label for="school-id">School ID</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="school-id" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="mb-3">
                                     <label for="phone">Phone Number</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="phone" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12">
