@@ -10,4 +10,8 @@ class AccountController extends Controller
     {
         return view('auth/signin');
     }
+    public function register(Request $request)
+    {
+        return view('auth/signup');
+    }
 }
