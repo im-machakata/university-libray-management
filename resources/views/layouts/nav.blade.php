@@ -28,7 +28,7 @@
     <div class="container d-flex flex-wrap justify-content-center">
         <a href="/search-books" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
             <img src="/static/images/bookshelf.svg" alt="Bookshelf icon" height="40">
-            <span class="fs-4 fw-bold">Find Books</span>
+            <span class="fs-4 ms-lg-2">Find Books</span>
         </a>
         <form class="col-12 col-lg-auto mb-3 mb-lg-0" role="search" action="/search-books">
             <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
