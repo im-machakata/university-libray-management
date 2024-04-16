@@ -5,7 +5,9 @@
   justify-content: center;
   place-items: middle;
 }
-.form-control {
+
+.form-control,
+button:focus {
   box-shadow: none !important;
   outline: none !important;
 }
