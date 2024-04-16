@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('phone')->nullable()->after('surname');
             $table->string('username')->after('phone')->unique();
             $table->string('school_id')->nullable()->after('username')->unique();
+            $table->dropColumn('email');
         });
     }
 
@@ -28,6 +29,7 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->dropConstrainedForeignId('course_id');
             $table->dropColumn(['surname', 'phone', 'username', 'school_id']);
+            $table->string('email')->unique();
         });
     }
 };
