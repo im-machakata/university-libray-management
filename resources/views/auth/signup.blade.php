@@ -11,43 +11,43 @@
                     <form action="/register" method="post">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="mb-3">
+                                <div class="mb-3 form-floating">
+                                    <input type="text" name="username" class="form-control" placeholder="john.doe">
                                     <label for="username">Username</label>
-                                    <input type="text" name="username" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="mb-3">
+                                <div class="mb-3 form-floating">
+                                    <input type="password" name="password" class="form-control" placeholder="p@$$w(0)rd">
                                     <label for="password">Password</label>
-                                    <input type="password" name="password" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="mb-3">
+                                <div class="mb-3 form-floating">
+                                    <input type="text" name="name" class="form-control" placeholder="John">
                                     <label for="name">Name</label>
-                                    <input type="text" name="name" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="mb-3">
+                                <div class="mb-3 form-floating">
+                                    <input type="text" name="surname" class="form-control" placeholder="Doe">
                                     <label for="surname">Surname</label>
-                                    <input type="text" name="surname" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="mb-3">
+                                <div class="mb-3 form-floating">
+                                    <input type="text" name="school-id" class="form-control" placeholder="School ID">
                                     <label for="school-id">School ID</label>
-                                    <input type="text" name="school-id" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="mb-3">
+                                <div class="mb-3 form-floating">
+                                    <input type="text" name="phone" class="form-control" placeholder="07...">
                                     <label for="phone">Phone Number</label>
-                                    <input type="text" name="phone" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-warning w-100">Register</button>
+                                <button class="btn btn-lg btn-warning w-100">Register</button>
                             </div>
                         </div>
                     </form>
