@@ -20,7 +20,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" id="username" name="username" class="form-control" placeholder="john.doe" required>
+                                    <input type="text" id="username" name="username" class="form-control" placeholder="john.doe" value="{{ old('username') }}" required>
                                     <label for="username">Username</label>
                                 </div>
                             </div>
