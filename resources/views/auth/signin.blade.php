@@ -9,12 +9,13 @@
                     <h1 class="fs-1">Login to your account</h1>
                     <p class="lead">You need to be logged in to access the online library.</p>
 
-                    @if($errors->any() || session()->flash('username'))
+                    @if($errors->any() || session()->get('error'))
                     <div class="alert alert-warning alert-dismissible fade show border-start border-4 border-warning border-top-0 border-bottom-0 border-end-0 rounded" role="alert">
-                        {{ Arr::first($errors->all()) }}
+                        {{ Arr::first($errors->all()) ?? session()->get('error') }}
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                     @endif
+
                     <form action="/login" method="post">
                         @csrf
                         <div class="row">

@@ -8,11 +8,20 @@
                 <div class="col-lg-6">
                     <h1 class="fs-1">Create an account</h1>
                     <p class="lead">Create an account and get access to our online library</p>
+
+                    @if($errors->any() || session()->get('error'))
+                    <div class="alert alert-warning alert-dismissible fade show border-start border-4 border-warning border-top-0 border-bottom-0 border-end-0 rounded" role="alert">
+                        {{ Arr::first($errors->all()) ?? session()->get('error') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    @endif
+
                     <form action="/register" method="post">
+                        @csrf
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" name="username" class="form-control" placeholder="john.doe">
+                                    <input type="text" name="username" class="form-control" placeholder="john.doe" value="{{ old('username') }}">
                                     <label for="username">Username</label>
                                 </div>
                             </div>
@@ -24,25 +33,25 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" name="name" class="form-control" placeholder="John">
+                                    <input type="text" name="name" class="form-control" placeholder="John" value="{{ old('name') }}">
                                     <label for="name">Name</label>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" name="surname" class="form-control" placeholder="Doe">
+                                    <input type="text" name="surname" class="form-control" placeholder="Doe" value="{{ old('surname') }}">
                                     <label for="surname">Surname</label>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" name="school-id" class="form-control" placeholder="School ID">
+                                    <input type="text" name="school_id" class="form-control" placeholder="School ID" value="{{ old('student_id') }}">
                                     <label for="school-id">School ID</label>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" name="phone" class="form-control" placeholder="07...">
+                                    <input type="text" name="phone" class="form-control" placeholder="07..." value="{{ old('phone') }}">
                                     <label for="phone">Phone Number</label>
                                 </div>
                             </div>
