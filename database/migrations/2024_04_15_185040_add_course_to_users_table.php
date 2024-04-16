@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('username')->after('phone')->unique();
             $table->string('school_id')->nullable()->after('username')->unique();
             $table->dropColumn('email');
+            $table->dropColumn('email_verified_at');
         });
     }
 
@@ -30,6 +31,7 @@ return new class extends Migration
             $table->dropConstrainedForeignId('course_id');
             $table->dropColumn(['surname', 'phone', 'username', 'school_id']);
             $table->string('email')->unique();
+            $table->timestamp('email_verified_at');
         });
     }
 };
