@@ -16,7 +16,7 @@ class UserIsLogged
     public function handle(Request $request, Closure $next): Response
     {
         if (!session()->get('user')) {
-            return abort(401, 'Unauthorized!');
+            return redirect('/login');
         }
         return $next($request);
     }
