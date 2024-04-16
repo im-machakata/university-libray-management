@@ -8,17 +8,25 @@
                 <div class="col-lg-6 z-1">
                     <h1 class="fs-1">Login to your account</h1>
                     <p class="lead">You need to be logged in to access the online library.</p>
+
+                    @if($errors->any() || session()->flash('username'))
+                    <div class="alert alert-warning alert-dismissible fade show border-start border-4 border-warning border-top-0 border-bottom-0 border-end-0 rounded" role="alert">
+                        {{ Arr::first($errors->all()) }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    @endif
                     <form action="/login" method="post">
+                        @csrf
                         <div class="row">
                             <div class="col-12">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" id="username" name="username" class="form-control" placeholder="john.doe">
+                                    <input type="text" id="username" name="username" class="form-control" placeholder="john.doe" required>
                                     <label for="username">Username</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="mb-3 form-floating">
-                                    <input type="password" id="password" name="password" class="form-control" placeholder="p@$$w()Rd">
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="p@$$w()Rd" required>
                                     <label for="password">Password</label>
                                 </div>
                             </div>
