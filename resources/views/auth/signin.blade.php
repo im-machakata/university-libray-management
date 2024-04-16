@@ -6,7 +6,7 @@
         <div class="container my-5">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6 z-1">
-                    <h1 class="fs-1">Login to your account</h1>
+                    <h1 class="fs-2">Login to your account</h1>
                     <p class="lead">You need to be logged in to access the online library.</p>
 
                     @if($errors->any() || session()->get('error'))

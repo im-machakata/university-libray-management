@@ -6,7 +6,7 @@
         <div class="container my-5">
             <div class="row">
                 <div class="col-lg-6">
-                    <h1 class="fs-1">Create an account</h1>
+                    <h1 class="fs-2">Create an account</h1>
                     <p class="lead">Create an account and get access to our online library</p>
 
                     @if($errors->any() || session()->get('error'))
