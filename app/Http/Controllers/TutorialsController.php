@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tutorial;
 use Illuminate\Http\Request;
 
 class TutorialsController extends Controller
 {
     public function index()
     {
-        return view('tutorials/index');
+        $tutorials = Tutorial::query()->paginate();
+        return view('tutorials/index')->with('tutorials', $tutorials);
     }
 }
