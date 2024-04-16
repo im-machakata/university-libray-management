@@ -22,6 +22,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/search-books', [BooksController::class, 'index']);
 Route::get('/read-books', [BooksController::class, 'read']);
 Route::get('/login', [AccountController::class, 'login']);
+Route::post('/login', [AccountController::class, 'authenticate']);
 Route::get('/register', [AccountController::class, 'register']);
 Route::get('/chat-with-a-librarian', [ChatController::class, 'index']);
 
