@@ -20,15 +20,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/search-books', [BooksController::class, 'index']);
-Route::get('/read-books', [BooksController::class, 'read']);
-Route::get('/login', [UsersController::class, 'login']);
-Route::post('/login', [UsersController::class, 'authenticate']);
-Route::get('/register', [UsersController::class, 'register']);
-Route::post('/register', [UsersController::class, 'createUserAccount']);
-Route::get('/chat-with-a-librarian', [ChatController::class, 'index']);
 Route::get('/system-tutorials', [TutorialsController::class, 'index']);
+Route::get('/system-tutorials/{slug}', [TutorialsController::class, 'read']);
 
-Route::middleware(UserIsLogged::class)->group(static function () {
+Route::middleware('guest')->group(static function () {
+    // add all routes that should work when not logged in only
+    Route::get('/login', [UsersController::class, 'login']);
+    Route::post('/login', [UsersController::class, 'authenticate']);
+    Route::get('/register', [UsersController::class, 'register']);
+    Route::post('/register', [UsersController::class, 'createUserAccount']);
+});
+
+Route::middleware('auth')->group(static function () {
     // add all routes that need to be accessed while logged in here. 
+    Route::get('/logout', [UsersController::class, 'delete']);
+    Route::get('/search-books', [BooksController::class, 'index']);
+    Route::get('/read-books', [BooksController::class, 'read']);
+    Route::get('/chat-with-a-librarian', [ChatController::class, 'index']);
 });

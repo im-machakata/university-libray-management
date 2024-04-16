@@ -27,6 +27,11 @@ class UsersController extends Controller
 
         return back()->with('error', 'The provided credentials do not match our records.')->withInput();
     }
+    public function delete(Request $request)
+    {
+        Auth::logout();
+        return redirect('/login');
+    }
     public function register(Request $request)
     {
         return view('auth/signup');

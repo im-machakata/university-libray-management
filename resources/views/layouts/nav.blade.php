@@ -26,12 +26,20 @@ if ($request->is("search-books") && $request->query('q')) {
             </li>
         </ul>
         <ul class="nav">
+            @guest
             <li class="nav-item">
                 <a href="/login" class="nav-link link-body-emphasis px-2">Login</a>
             </li>
             <li class="nav-item">
                 <a href="/register" class="nav-link link-body-emphasis px-2">Sign up</a>
             </li>
+            @else
+            <li class="nav-item">
+                <a href="/logout" class="nav-link link-body-emphasis px-2">
+                    Logout
+                </a>
+            </li>
+            @endif
         </ul>
     </div>
 </nav>
