@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AccountController;
+use App\Http\Controllers\UsersController;
 use App\Http\Controllers\BooksController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\HomeController;
@@ -21,9 +21,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/search-books', [BooksController::class, 'index']);
 Route::get('/read-books', [BooksController::class, 'read']);
-Route::get('/login', [AccountController::class, 'login']);
-Route::post('/login', [AccountController::class, 'authenticate']);
-Route::get('/register', [AccountController::class, 'register']);
+Route::get('/login', [UsersController::class, 'login']);
+Route::post('/login', [UsersController::class, 'authenticate']);
+Route::get('/register', [UsersController::class, 'register']);
+Route::post('/register', [UsersController::class, 'createUserAccount']);
 Route::get('/chat-with-a-librarian', [ChatController::class, 'index']);
 
 Route::middleware(UserIsLogged::class)->group(static function () {
