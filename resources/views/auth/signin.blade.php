@@ -35,7 +35,7 @@
                     </form>
                 </div>
                 <div class="col-lg-6">
-                    <img src="/static/images/class.jpg" class="img-fluid rounded-3 z-0" alt="Empty classroom image">
+                    <img src="/static/images/class.jpg" class="img-fluid rounded-3 z-0 mt-3" alt="Empty classroom image">
                 </div>
             </div>
         </div>
