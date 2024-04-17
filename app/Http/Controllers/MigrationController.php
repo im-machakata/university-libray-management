@@ -21,5 +21,7 @@ class MigrationController extends Controller
         if (!$request->has('refresh')) {
             Artisan::call('migrate');
         }
+
+        return response('It is done!');
     }
 }
