@@ -12,4 +12,9 @@ class TutorialsController extends Controller
         $tutorials = Tutorial::query()->paginate();
         return view('tutorials/index')->with('tutorials', $tutorials);
     }
+    public function read(string $slug, Request $request)
+    {
+        $tutorial = Tutorial::query()->whereSlug($slug)->firstOrFail();
+        return view('tutorials/read')->with('tutorial', $tutorial);
+    }
 }
