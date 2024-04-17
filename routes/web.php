@@ -33,10 +33,10 @@ Route::middleware('guest')->group(static function () {
     Route::post('/register', [UsersController::class, 'createUserAccount']);
 });
 
-Route::middleware('auth')->group(static function () {
+Route::middleware(['auth','session.valid'])->group(static function () {
     // add all routes that need to be accessed while logged in here. 
     Route::get('/logout', [UsersController::class, 'delete']);
     Route::get('/search-books', [BooksController::class, 'index']);
     Route::get('/read-books', [BooksController::class, 'read']);
-    Route::get('/chat-with-a-librarian', [ChatController::class, 'index']);
+    Route::get('/talk-to-a-librarian', [ChatController::class, 'index']);
 });
