@@ -31,7 +31,7 @@ return new class extends Migration
             $table->dropConstrainedForeignId('course_id');
             $table->dropColumn(['surname', 'phone', 'username', 'school_id']);
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at');
+            $table->timestamp('email_verified_at')->nullable();
         });
     }
 };
