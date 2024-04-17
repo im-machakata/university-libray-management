@@ -16,7 +16,7 @@
                         <div class="card-body">
                             <h2 class="fs-4 card-title">Chat with us</h2>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="/chat-with-a-librarian" class="btn btn-outline-success d-block text-uppercase">Chat</a>
+                            <a href="/talk-to-a-librarian" class="btn btn-outline-success d-block text-uppercase">Chat</a>
                         </div>
                     </div>
                 </div>

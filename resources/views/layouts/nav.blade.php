@@ -19,7 +19,7 @@ if ($request->is("search-books") && $request->query('q')) {
                 <a href="/read-books" class="nav-link link-body-emphasis px-2">Read Books</a>
             </li>
             <li class="nav-item">
-                <a href="/chat-with-a-librarian" class="nav-link link-body-emphasis px-2">Chat with us</a>
+                <a href="/talk-to-a-librarian" class="nav-link link-body-emphasis px-2">Chat with us</a>
             </li>
             <li class="nav-item">
                 <a href="/system-tutorials" class="nav-link link-body-emphasis px-2">System Tutorials</a>
