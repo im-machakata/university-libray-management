@@ -15,6 +15,7 @@ class MigrationController extends Controller
 
             // if that's the case, install users
             Artisan::call('db:seed --class=UserSeeder');
+            Artisan::call('db:seed --class=LibraryBooksSeeder');
         }
 
         // or just update the existing database
