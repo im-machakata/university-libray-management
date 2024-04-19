@@ -15,7 +15,7 @@ class BooksController extends Controller
     {
         $searchResults = array();
         $query = $request->query('q');
-        $type = $request->query('type');
+        $type = $request->query('type') ?? 'book';
         $page = array(
             'title' => 'Search for books',
             'description' => 'Search and read text books from the comfort of your home with our online library.'
@@ -44,6 +44,6 @@ class BooksController extends Controller
     }
     public function read(Request $request)
     {
-        return view('books/read');
+        return view('books/read')->with('books', Book::query()->get());
     }
 }
