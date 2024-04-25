@@ -16,7 +16,7 @@ jobs:
       uses: php-actions/composer@v6
       with:
         php_version: "8.2"
-        command: install --no-dev --prefer-dist
+        command: install
 
     - name: FTP Upload
       uses: modern-dev/ftp-mirror@v2
