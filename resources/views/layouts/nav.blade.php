@@ -26,7 +26,7 @@ if ($request->is("search-books") && $request->query('q')) {
             </li>
         </ul>
         <ul class="nav">
-            @if(auth()->user()->role == 'Admin')
+            @if(auth()->user() && auth()->user()->role == 'Admin')
             <li class="nav-item">
                 <a href="/books/new" class="nav-link link-body-emphasis px-2">
                     Add Books
