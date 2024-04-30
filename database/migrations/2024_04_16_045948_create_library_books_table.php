@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('isbn')->unique()->nullable();
             $table->string('source')->unique();
+            $table->json('keywords')->nullable();
+            $table->json('authors')->nullable();
             $table->timestamps();
         });
     }
