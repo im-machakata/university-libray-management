@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Author;
+use App\Models\Authors;
 use App\Models\Book;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
@@ -26,7 +27,7 @@ class BooksController extends Controller
             $page['title'] = 'You searched for ' . $query;
             $page['description'] = 'Showing search results for any books that include the text ' . $query;
             if ($type == 'author') {
-                $searchResults = Author::query()
+                $searchResults = Authors::query()
                     ->where('name', 'like', self::$likenedQuery)
                     ->get();
             } else if (!$type || $type == 'book') {
@@ -45,5 +46,20 @@ class BooksController extends Controller
     public function read(Request $request)
     {
         return view('books/read')->with('books', Book::query()->get());
+    }
+    public function create()
+    {
+        return view('books/create')->with('authors', Authors::query()->get());
+    }
+    public function store(Request $request)
+    {
+        $bookDetails = $request->validate([
+            'title' => ['required', 'min:3', 'max:255'],
+            'isbn' => ['required', 'min:8', 'max:17', 'unique:books,isbn'],
+            'authors' => ['required', 'array'],
+            'source' => ['required', 'url'],
+        ]);
+        $book = Book::query()->create($bookDetails);
+        return redirect()->route('books.read');
     }
 }

@@ -10,9 +10,10 @@
             <div class="row mt-4">
                 @foreach($books as $book)
                 <div class="col-lg-3">
-                    <div class="card mb-2">
+                    <div class="card mb-4">
                         <div class="card-body">
                             <h2 class="fs-4">{{ Str::limit($book->title, 25) }}</h2>
+                            <a href="{{$book->source}}">Read book</a>
                         </div>
                     </div>
                 </div>
