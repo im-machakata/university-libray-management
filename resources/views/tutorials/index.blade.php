@@ -7,9 +7,14 @@
             <h1 class="fs-2">System Tutorials</h1>
             <p class="lead">Learn how to use the system like a pro.</p>
             <div class="row mt-2">
-                @for($i=0;$i<=5;$i++) 
-                <x-articles.tutorials title="Tutorial #{{$i+1}}" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolorum cupiditate nam?" slug="hie" />
-                @endfor
+                @foreach($tutorials as $tutorial)
+                <x-articles.tutorials title="{{$tutorial->title}}" content="{{ Str::limit($tutorial->content) }}" slug="{{ $tutorial->slug }}" />
+                @endforeach
+                @if(count($tutorials) == 0)
+                <div class="alert alert-warning">
+                    No tutorials found.
+                </div>
+                @endif
             </div>
         </div>
     </div>
