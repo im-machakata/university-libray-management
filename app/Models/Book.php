@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 {
-    protected $fillable = ['title', 'isbn', 'source'];
+    protected $fillable = ['title', 'isbn', 'source', 'keywords', 'authors'];
     use HasFactory;
 
     public function authors()
     {
-        return $this->belongsToMany(Author::class, 'book_authors');
+        // return $this->belongsToMany(Author::class, 'book_authors');
     }
     public function keywords()
     {
