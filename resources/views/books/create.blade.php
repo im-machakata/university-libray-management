@@ -12,7 +12,8 @@
             <x-alert.warning :message="Arr::first($errors->all()) ?? session()->get('error')" />
             @endif
 
-            <form action="/" method="post">
+            <form action="/books/new" method="post">
+                @csrf
                 <div class="row mt-4">
                     <div class="col-md-4 mb-3">
                         <div class="form-floating">
