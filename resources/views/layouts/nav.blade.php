@@ -26,6 +26,23 @@ if ($request->is("search-books") && $request->query('q')) {
             </li>
         </ul>
         <ul class="nav">
+            @if(auth()->user()->role == 'Admin')
+            <li class="nav-item">
+                <a href="/books/new" class="nav-link link-body-emphasis px-2">
+                    Add Books
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/authors/new" class="nav-link link-body-emphasis px-2">
+                    Add Authors
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/tutorials/new" class="nav-link link-body-emphasis px-2">
+                    Add Tutorials
+                </a>
+            </li>
+            @endif
             @guest
             <li class="nav-item">
                 <a href="/login" class="nav-link link-body-emphasis px-2">Login</a>
@@ -44,7 +61,7 @@ if ($request->is("search-books") && $request->query('q')) {
     </div>
 </nav>
 <header class="py-3 mb-4 border-bottom">
-    <div class="container d-flex flex-wrap justify-content-center">
+    <div class="container d-md-flex flex-wrap justify-content-center">
         <a href="/search-books" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
             <img src="/static/images/bookshelf.svg" alt="Bookshelf icon" height="40">
             <span class="fs-4 ms-lg-2">Find Books</span>
