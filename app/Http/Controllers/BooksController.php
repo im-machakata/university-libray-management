@@ -53,13 +53,16 @@ class BooksController extends Controller
     }
     public function store(Request $request)
     {
-        $bookDetails = $request->validate([
+        $book = $request->validate([
             'title' => ['required', 'min:3', 'max:255'],
             'isbn' => ['required', 'min:8', 'max:17', 'unique:books,isbn'],
             'authors' => ['required', 'array'],
             'source' => ['required', 'url'],
         ]);
-        $book = Book::query()->create($bookDetails);
+
+        // save book if validation passes
+        $book['authors'] = json_encode($book['authors']);
+        Book::create($book);
         return redirect()->route('books.read');
     }
 }

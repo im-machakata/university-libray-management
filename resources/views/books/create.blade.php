@@ -38,7 +38,7 @@
 
                     <div class="col-12 mb-3">
                         <div class="form-floating">
-                            <select multiple data-show-all-suggestions="true" class="form-select form-control" id="authors" name="authors">
+                            <select multiple data-show-all-suggestions="true" class="form-select form-control" id="authors" name="authors[]">
                                 <option selected>Select authors</option>
                                 @foreach($authors as $author)
                                 <option value="{{ $author->id }}">{{ $author->name }}</option>
