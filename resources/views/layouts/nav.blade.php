@@ -9,6 +9,18 @@ $request = Request::capture();
 if ($request->is("search-books") && $request->query('q')) {
     $query = $request->query('q');
 } ?>
+<header class="pt-3 py-lg-3 border-bottom">
+    <div class="container d-md-flex flex-wrap justify-content-center">
+        <a href="/search-books" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
+            <img src="/static/images/bookshelf.svg" alt="Bookshelf icon" height="40">
+            <span class="fs-4 ms-lg-2">Find Books</span>
+        </a>
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 d-flex gap-2" role="search" action="/search-books">
+            <input name="q" type="search" class="form-control" placeholder="ISBN, Title or Keywords..." value="{{ $query }}" aria-label="Search" required>
+            <button class="btn btn-outline-light border text-dark text-uppercase d-inline-block" type="submit"><i class="fa-light fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+</header>
 <nav class="py-2 border-bottom">
     <div class="container d-flex flex-wrap">
         <ul class="nav me-auto">
@@ -60,15 +72,3 @@ if ($request->is("search-books") && $request->query('q')) {
         </ul>
     </div>
 </nav>
-<header class="py-3 mb-4 border-bottom">
-    <div class="container d-md-flex flex-wrap justify-content-center">
-        <a href="/search-books" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
-            <img src="/static/images/bookshelf.svg" alt="Bookshelf icon" height="40">
-            <span class="fs-4 ms-lg-2">Find Books</span>
-        </a>
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 d-flex gap-2" role="search" action="/search-books">
-            <input name="q" type="search" class="form-control" placeholder="ISBN, Title or Keywords..." value="{{ $query }}" aria-label="Search" required>
-            <button class="btn btn-outline-light border text-dark text-uppercase d-inline-block" type="submit"><i class="fa-light fa-magnifying-glass"></i></button>
-        </form>
-    </div>
-</header>
