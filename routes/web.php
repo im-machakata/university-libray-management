@@ -1,15 +1,14 @@
 <?php
 
-use App\Http\Controllers\AuthorsController;
-use App\Http\Controllers\UsersController;
-use App\Http\Controllers\BooksController;
+use App\Http\Middleware\UserIsAdmin;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BooksController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\AuthorsController;
 use App\Http\Controllers\MigrationController;
 use App\Http\Controllers\TutorialsController;
-use App\Http\Middleware\UserIsAdmin;
-use App\Http\Middleware\UserIsLogged;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
