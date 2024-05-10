@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BooksController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\AuthorsController;
+use App\Http\Controllers\ConversationsController;
 use App\Http\Controllers\MigrationController;
 use App\Http\Controllers\TutorialsController;
 
@@ -39,7 +40,8 @@ Route::middleware(['auth', 'session.valid'])->group(static function () {
     Route::get('/logout', [UsersController::class, 'delete']);
     Route::get('/search-books', [BooksController::class, 'index']);
     Route::get('/read-books', [BooksController::class, 'read'])->name('books.read');
-    Route::get('/talk-to-a-librarian', [ChatController::class, 'index']);
+    Route::get('/talk-to-a-librarian', [ConversationsController::class, 'index']);
+    Route::post('/talk-to-a-librarian', [ConversationsController::class, 'store']);
 });
 
 Route::middleware(['auth', 'session.valid', UserIsAdmin::class])->group(static function () {
