@@ -48,8 +48,6 @@ class UsersController extends Controller
         ]);
 
         if (User::query()->create($userAccountDetails)) {
-            $request->session()->regenerate();
-
             return redirect()->intended('/login');
         }
 
