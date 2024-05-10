@@ -14,4 +14,8 @@ class Conversation extends Model
     {
         return $this->belongsTo(User::class, 'initiator', 'id');
     }
+
+    public function getLastMessage(){
+        return Chat::query()->where('thread_id', $this->id)->orderByDesc('id')->first();
+    }
 }
