@@ -16,7 +16,6 @@ return new class extends Migration
             $table->text('message');
             $table->foreignId('sender_id')->constrained('users');
             $table->foreignId('receiver_id')->constrained('users');
-            $table->foreignId('reference_id')->nullable()->constrained('chats');
             $table->timestamps();
         });
     }
