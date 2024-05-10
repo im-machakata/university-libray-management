@@ -46,7 +46,7 @@ You will also need to create an empty database for the system through your `PHPM
 
 ## Database Seeding (1 min)
 
-Once you have installed and configured the system, you can open the following web page to seed the database `http://localhost/libmgmt/_db/_migrate?force=install`. This should return "Done" if all went well.
+Once you have installed and configured the system, you can open the following web page to seed the database `http://localhost/libmgmt/system/migrate?refresh=install`. This should return "Done" if all went well.
 
 ## Admin Auth
 
