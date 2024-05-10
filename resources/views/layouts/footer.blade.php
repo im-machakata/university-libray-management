@@ -33,16 +33,16 @@
                 <h5>Links</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Search Books</a>
+                        <a href="/read-books" class="nav-link p-0 text-body-secondary">Search Books</a>
                     </li>
                     <li class="nav-item mb-2">
                         <a href="#" class="nav-link p-0 text-body-secondary">Search Authors</a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">View Tutorials</a>
+                        <a href="/tutorials" class="nav-link p-0 text-body-secondary">View Tutorials</a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">View Chats</a>
+                        <a href="/talk-to-a-librarian" class="nav-link p-0 text-body-secondary">View Chats</a>
                     </li>
                 </ul>
             </div>
@@ -51,16 +51,16 @@
                 <h5>Admins</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">New Books</a>
+                        <a href="/books/new" class="nav-link p-0 text-body-secondary">New Books</a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">New Tutorials</a>
+                        <a href="/tutorials/new" class="nav-link p-0 text-body-secondary">New Tutorials</a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">New Authors</a>
+                        <a href="/authors/new" class="nav-link p-0 text-body-secondary">New Authors</a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Messages</a>
+                        <a href="/talk-to-a-librarian" class="nav-link p-0 text-body-secondary">Messages</a>
                     </li>
                 </ul>
             </div>
