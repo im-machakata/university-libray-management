@@ -9,4 +9,9 @@ class Conversation extends Model
 {
     use HasFactory;
     protected $fillable = ['initiator', 'receiver'];
+
+    public function owner()
+    {
+        return $this->belongsTo(User::class, 'initiator', 'id');
+    }
 }
